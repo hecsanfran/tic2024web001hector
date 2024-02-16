@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - dino</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet-extra-markers/1.2.2/css/leaflet.extra-markers.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <style>
+    body {
+      background-color: lightblue;
+      margin: 0; /* Elimina el margen por defecto del body */
+    }
+
+    .bloque1 {
+      border: 2px solid gold;
+      background-color: gold;
+      margin: 10px 0;
+      padding-bottom: 50px; /* Añade espacio para los botones al final */
+    }
+
+    .bloque2 {
+      border: 2px solid silver;
+      background-color: silver;
+      margin: 10px 0;
+    }
+
+    img {
+      width: 400px;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .bottom-buttons {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: gold;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <p style="text-align:center">
+    <img src="https://www.nationalgeographic.com.es/medio/2021/08/26/parasaurolophus_b84e829f_2000x1500.jpg" alt="DINOSAURIO">
+  </p>
+
+  <div class="bloque1"onmouseover="mostrarFecha()">
+    <h1>LOS DINOS</h1>
+    <section>
+      <p>PARA ENTRAR EN MATERIA.</p>
+    </section>
+    <p>Los dinosaurios fueron una parte importante y asombrosa de nuestra historia, y su estudio ha brindado muchas pistas sobre su vida y características, como su enorme tamaño y forma.</p>
+  </div>
+
+  <div class="bloque2"onmouseover="cambiarColor()" onmouseout="restaurarColor()">
+    <section>
+      <p>CARACTERISTICAS.</p>
+      <div>
+        <p>Eran animales de gran tamaño, algunos cuadrúpedos con cuello largo y cola extensa, como el Diplodocus, y otros bípedos y depredadores, como el Tyrannosaurus.</p>
+        <p>El término "dinosaurio" se compone de las voces griegas "deinós" ("terrible") y "sauros" ("lagarto"), lo que indica que eran reptiles muy distintos a los que conocemos.</p>
+        <p>Los nombres de los dinosaurios a menudo describen sus características, por ejemplo, "dino" significa "terrible" y "saurio" significa "lagarto".</p>
+      </div>
+    </section>
+    <section>
+      <p>FINALMENTE.</p>
+      <p>Eran un grupo muy amplio y diverso de animales, con más de mil especies distintas, provenientes de todos los rincones del planeta.</p>
+      <a href="#">https://www.fundaciondinosaurioscyl.com/es/c/?idsec=365</a>
+      <a href="#">https://destinocastillayleon.es/index/ruta-los-dinosaurios-soria/</a>
+      <a href="#">https://www.menudoesleon.com/exposicion-de-grandes-dinosaurios-animatronicos/</a>
+    </section>
+  </div>
+
+  <div class="clear"></div>
+
+  <center>
+    <button id="btnCreditos">Créditos</button>
+  </center>
+
+  <div class="center">
+    <p>Derechos de autor © 2024 - Hector San Francisco</p>
+  </div>
+
+  <div class="bottom-buttons">
+    <button id="btnOcultar">Ocultar Sección</button>
+    <button id="btnMostrar">Mostrar Sección</button>
+    <button id="btnCambiarColor">Cambiar Color</button>
+  </div>
+   <button id="btnObtenerUbicacion">Obtener Ubicación</button>
+  </div>
+  <div id="ubicacion">
+    <p id="coordenadas"></p>
+    <div id="map"></div>
+  </div>
+ <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+  <script>
+    document.getElementById('btnCreditos').addEventListener('click', function () {
+      alert('Autor: Hector San Francisco\nCurso y Grupo: [2ºB. Nº27]');
+    });
+
+    document.getElementById('btnOcultar').addEventListener('click', function () {
+      document.querySelector('.bloque1').style.display = 'none';
+    });
+
+    document.getElementById('btnMostrar').addEventListener('click', function () {
+      document.querySelector('.bloque1').style.display = 'block';
+    });
+
+    document.getElementById('btnCambiarColor').addEventListener('click', function () {
+      document.querySelector('.bloque1').style.backgroundColor = getRandomColor();
+    });
+
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

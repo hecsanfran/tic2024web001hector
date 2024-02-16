@@ -1,0 +1,46 @@
+body {
+  background-color: lightblue;
+}
+
+.bloque1 {
+  border: 2px solid gold;
+  background-color: gold;
+  margin: 10px 0;
+}
+
+.bloque2 {
+  border: 2px solid silver;
+  background-color: silver;
+  margin: 10px 0;
+}
+
+img {
+  width: 400px;
+}
+
+.clear {
+  clear: both;
+}
+
+.center {
+  text-align: center;
+}
+
+.bottom-buttons {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: gold;
+  padding: 10px;
+  text-align: center;
+}
+
+#ubicacion {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+}
